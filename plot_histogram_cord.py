@@ -9,13 +9,13 @@ plt.xlabel("Liczba koordynacyjna")
 plt.title("Histogram dla liczby koordynacyjnej")
 
 temp = 300  # K
-#k = 0.0083144626  # kJ/(mol*K)
-k = 8.6173333e-05  # eV/K
+k = 0.0083144626  # kJ/(mol*K)
+# k = 8.6173333e-05  # eV/K
 
 N = hist[0]
 bins = hist[1]
 
-F = - np.log(N) * k * temp
+F = -np.log(N) * k * temp
 
 dist_prime = []
 for i in range(len(bins) - 1):
@@ -24,7 +24,7 @@ for i in range(len(bins) - 1):
 plt.figure()
 plt.plot(dist_prime, F, color="olivedrab")
 plt.xlabel("Liczba koordynacyjna")
-plt.ylabel("F [eV]")
+plt.ylabel("F [kJ/mol]")
 plt.title("Energia swobodna dla liczby koordynacyjnej")
 
 plt.show()
